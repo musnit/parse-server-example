@@ -30,7 +30,7 @@ var mountPath = process.env.PARSE_MOUNT || '/parse';
 var dashboard = new ParseDashboard({
   "apps": [
     {
-      "serverURL": "http://localhost:1337" + mountPath,
+      "serverURL": process.env.SERVER_URL || 'http://localhost:1337/parse',
       "appId": process.env.APP_ID || 'myAppId',
       "masterKey": process.env.MASTER_KEY || 'myMasterKey',
       "appName": "MyApp"

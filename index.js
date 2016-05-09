@@ -41,7 +41,7 @@ var dashboard = new ParseDashboard({
     "user":"admin",
     "pass":"pass"
   }
-]});
+]}, process.env.PARSE_DASHBOARD_ALLOW_INSECURE_HTTP);
 
 var app = express();
 
